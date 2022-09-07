@@ -1,4 +1,4 @@
-package ch04最小路径和系列_931下降路径最小和;
+package ch04最小路径和系列.a_931下降路径最小和;
 
 import java.util.Arrays;
 

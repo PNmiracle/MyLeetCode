@@ -1,4 +1,4 @@
-package ch04最小路径和系列.b64最小路径和;
+package ch04最小路径和系列.b_64最小路径和;
 
 import java.util.Arrays;
 
