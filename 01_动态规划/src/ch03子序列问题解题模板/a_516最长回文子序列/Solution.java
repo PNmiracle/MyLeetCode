@@ -4,7 +4,7 @@ package ch03子序列问题解题模板.a_516最长回文子序列;
  * @Author mapKey
  * @Date 2022-09-06-3:42 PM
  */
- class Solution1 {
+class Solution1 {
     int longestPalindromeSubseq(String s) {
         int n = s.length();
         // dp 数组全部初始化为 0

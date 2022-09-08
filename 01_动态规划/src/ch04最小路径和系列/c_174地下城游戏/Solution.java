@@ -59,6 +59,7 @@ class Solution2 {
         int m = dungeon.length;
         int n = dungeon[0].length;
         int[][] dp = new int[m + 1][n + 1];
+        /* 定义：从 (i, j) 到达右下角，需要的初始血量至少是多少 */
         dp[m - 1][n - 1] = dungeon[m - 1][n - 1] < 0 ? -dungeon[m - 1][n - 1] + 1 : 1;
         for (int i = m; i >= 0; i--) {
             for (int j = n; j >= 0; j--) {
@@ -76,6 +77,7 @@ class Solution2 {
         return dp[0][0];
     }
 }
+
 //状态压缩如下：
 class Solution3 {
     public int calculateMinimumHPII(int[][] dungeon) {
