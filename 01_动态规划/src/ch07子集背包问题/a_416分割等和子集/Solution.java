@@ -4,7 +4,7 @@ package ch07子集背包问题.a_416分割等和子集;
  * @Author mapKey
  * @Date 2022-09-09-8:57 AM
  */
-class Solution_1 {
+class Solution_1_转化为0_1背包问题 {
     /***`dp[i][j] = x` 表示，对于前 `i` 个物品（`i` 从 1 开始计数），当前背包的容量为 `j` 时，若 `x` 为 `true`，则说明可以恰好将背包装满，若 `x` 为 `false`，则说明不能恰好将背包装满**。*/
     boolean canPartition(int[] nums) {
         int sum = 0;
@@ -64,7 +64,7 @@ class Solution_1空间优化 {
 
 3.现在解释对1D数组进行反向遍历即从dp[n-1]->dp[0]填充。同样，对于某一位例如dp[cur]的更新，势必会用到dp[pre]（pre<cur）。但注意，因为是从后往前进行遍历的，此时dp[pre]在当前轮次未被更新，所以就相当于2D情况下使用的上一行的值，这样计算就是正确的了。*/
 
-class Solution {
+class Solution_正着遍历错误 {
     /***`dp[i][j] = x` 表示，对于前 `i` 个物品（`i` 从 1 开始计数），当前背包的容量为 `j` 时，若 `x` 为 `true`，则说明可以恰好将背包装满，若 `x` 为 `false`，则说明不能恰好将背包装满**。*/
     public boolean canPartition(int[] nums) {
         int sum = 0;
