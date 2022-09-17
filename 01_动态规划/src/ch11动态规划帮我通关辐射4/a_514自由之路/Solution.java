@@ -40,7 +40,7 @@ class Solution1 {
         // 查找备忘录，避免重叠子问题
         if (memo[i][j] != 0) return memo[i][j];
 
-        int n = ring.length();
+        int m = ring.length();
         // 做选择
         int res = Integer.MAX_VALUE;
         // ring 上可能有多个字符 key[j]
@@ -48,7 +48,7 @@ class Solution1 {
             // 拨动指针的次数
             int delta = Math.abs(k - i);
             // 选择顺时针还是逆时针
-            delta = Math.min(delta, n - delta);
+            delta = Math.min(delta, m - delta);
             // 将指针拨到 ring[k]，继续输入 key[j+1..]
             int subProblem = dp(ring, k, key, j + 1);
             // 选择「整体」操作次数最少的
